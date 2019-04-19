@@ -1,0 +1,22 @@
+# 所有环境通用的配置，放在这里
+spring:
+  profiles:
+    active: dev
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+pagehelper:
+    helper-dialect: h2
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+logging:
+  level:
+    root: INFO
+    com.self.project: debug
